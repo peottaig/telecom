@@ -38,6 +38,3 @@ O projeto fornecerá uma compreensão abrangente do sistema GSM, sua importânci
 - Documentação técnica e padrões
 - Estudos de caso e análises de mercado
 - Estagio supervisionado
-
-## Contato
-Para mais informações, entre em contato com a equipe do projeto através do email: [projeto.gsm@telecom.com](mailto:projeto.gsm@telecom.com)
