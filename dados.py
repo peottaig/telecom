@@ -31,7 +31,7 @@ class MakeNumber:
         return 11
 
     def prefixRandom(self):
-        prefix =[3250, 3260, 3270]
+        prefix =['3250', '3260', '3270']
         return r.choice(prefix)
     
     def mcduRandom(self):
@@ -43,3 +43,29 @@ class MakeNumber:
         mcdu = self.mcduRandom()
         return f"{cd}{prefix}{mcdu}"
     
+
+class MakeData:
+    
+    def debtorRandom(self):
+        debtor = ['O', 'D']
+        return r.choice(debtor)
+    
+    def dataStart(self):
+        YYYY = 2025
+        MM = str(r.randint(1, 12))      
+        DD = str(r.randint(1, 31))
+        HH = str(r.randint(0, 23))
+        MM = str(r.randint(0, 59))
+        SS = str(r.randint(0, 59))
+        return str(f"{YYYY}{MM}{DD}{HH}{MM}{SS}")
+    
+    def durationRandom(self):
+        return str(f"{r.randint(0, 999999):06d}") 
+
+    def entry_Route(self):
+        routs = ['0001', '0002', '0003']
+        return r.choice(routs)
+    
+    def exit_Route(self):
+        routs = ['0001', '0002', '0003']
+        return r.choice(routs)
