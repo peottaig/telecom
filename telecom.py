@@ -1,2 +1,3 @@
-from dados import Dados
+from dados import Dados as d
 
+print(d.MCDURandom(d()))

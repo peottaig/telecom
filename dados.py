@@ -9,6 +9,7 @@ Prefix (11) 3215 - (0000-9999)
                    (Range 0000-9999)
        (11) operator-XXXX (Range 0000-9999)
 
+MCDU: (0000-9999)
 Number of origin (11) 32XX-XXXX
 Destination number (11) 32XX-XXXX
 Debtor: O/D
@@ -30,4 +31,6 @@ class Dados:
         prefix =[3250, 3260, 3270]
         return r.choice(prefix)
     
+    def MCDURandom(self):
+        return f"{r.randint(0, 9999):04d}"
     
