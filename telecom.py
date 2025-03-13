@@ -1,3 +1,2 @@
-from dados import Dados as d
+from dados import MakeNumber
 
-print(d.MCDURandom(d()))

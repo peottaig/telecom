@@ -25,12 +25,21 @@ Exit route: 0001
 '''
 import random as r
 
-class Dados:
+class MakeNumber:
+
+    def cdFix(self):
+        return 11
 
     def prefixRandom(self):
         prefix =[3250, 3260, 3270]
         return r.choice(prefix)
     
-    def MCDURandom(self):
+    def mcduRandom(self):
         return f"{r.randint(0, 9999):04d}"
+    
+    def numberRandom(self):
+        cd = self.cdFix()
+        prefix = self.prefixRandom()
+        mcdu = self.mcduRandom()
+        return f"{cd}{prefix}{mcdu}"
     
