@@ -1,36 +1,38 @@
+
 from dados import MakeNumber
 from dados import MakeData
-
-md = MakeData()
-mn = MakeNumber()
 
 class Files:
     
     def __init__(self):
-        super().__init__()
         self.md = MakeData()
         self.mn = MakeNumber()
-        self.numberDestiny = mn.numberRandom()
-        self.numberOrigin = mn.numberRandom()
-        self.debtor = md.debtorRandom()
-        self.dataStart = md.dataStart()
-        self.duration = md.durationRandom()
-        self.entry_Route = md.entry_Route()
-        self.exit_Route = md.exit_Route()
-        self.dataDict = {
-            self.numberDestiny: 16,
-            self.numberOrigin: 25,
-            self.debtor: 1,
-            self.dataStart: 14,
-            self.duration: 6,
-            self.entry_Route: 4,
-            self.exit_Route: 4
+        self.dataDictSpec = {
+            "numberDestiny": 16,
+            "numberOrigin": 25,
+            "debtor": 1,
+            "dataStart": 14,
+            "duration": 6,
+            "entry_Route": 4,
+            "exit_Route": 4
         }
 
-    
+    def createDataDict(self):
+        dataDict = {
+            "numberDestiny": self.mn.numberRandom(),
+            "numberOrigin": self.mn.numberRandom(),
+            "debtor": self.md.debtorRandom(),
+            "dataStart": self.md.dataStart(),
+            "duration": self.md.durationRandom(),
+            "entry_Route": self.md.entry_Route(),
+            "exit_Route": self.md.exit_Route()
+        }
+        return dataDict
+
     def dataFormat(self):
+        dict_ = self.createDataDict()
         data = ''
-        for key, value in self.dataDict.items():
-            data += f"{key:<{value}}"     
+        for key, value in dict_.items():
+            data += f"{value:<{self.dataDictSpec[key]}}"     
         return data.replace(' ', '-')
 
