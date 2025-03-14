@@ -4,7 +4,7 @@ from dados import MakeData
 md = MakeData()
 mn = MakeNumber()
 
-class files:
+class Files:
     
     def __init__(self):
         super().__init__()
@@ -28,3 +28,9 @@ class files:
         }
 
     
+    def dataFormat(self):
+        data = ''
+        for key, value in self.dataDict.items():
+            data += f"{key:<{value}}"     
+        return data.replace(' ', '-')
+
