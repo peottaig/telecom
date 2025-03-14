@@ -55,9 +55,9 @@ class MakeData:
         MM = r.randint(1, 12)   
         DD = r.randint(1, 31)
         HH = r.randint(0, 23)
-        MM = r.randint(0, 59)
+        MI = r.randint(0, 59)
         SS = r.randint(0, 59)
-        dataStart = f"{YYYY}{MM:02d}{DD:02d}{HH:02d}{MM:02d}{SS:02d}"
+        dataStart = f"{YYYY}{MM:02d}{DD:02d}{HH:02d}{MI:02d}{SS:02d}"
         dataStart = str(dataStart)
         return dataStart
         
