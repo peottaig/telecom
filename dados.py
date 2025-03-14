@@ -41,7 +41,7 @@ class MakeNumber:
         cd = self.cdFix()
         prefix = self.prefixRandom()
         mcdu = self.mcduRandom()
-        return f"{cd}{prefix}{mcdu}"
+        return str(f"{cd}{prefix}{mcdu}")
     
 
 class MakeData:
@@ -52,20 +52,23 @@ class MakeData:
     
     def dataStart(self):
         YYYY = 2025
-        MM = str(r.randint(1, 12))      
-        DD = str(r.randint(1, 31))
-        HH = str(r.randint(0, 23))
-        MM = str(r.randint(0, 59))
-        SS = str(r.randint(0, 59))
-        return str(f"{YYYY}{MM}{DD}{HH}{MM}{SS}")
+        MM = r.randint(1, 12)   
+        DD = r.randint(1, 31)
+        HH = r.randint(0, 23)
+        MM = r.randint(0, 59)
+        SS = r.randint(0, 59)
+        dataStart = f"{YYYY}{MM:02d}{DD:02d}{HH:02d}{MM:02d}{SS:02d}"
+        dataStart = str(dataStart)
+        return dataStart
+        
     
     def durationRandom(self):
         return str(f"{r.randint(0, 999999):06d}") 
 
     def entry_Route(self):
         routs = ['0001', '0002', '0003']
-        return r.choice(routs)
+        return str(r.choice(routs))
     
     def exit_Route(self):
         routs = ['0001', '0002', '0003']
-        return r.choice(routs)
+        return str(r.choice(routs))
