@@ -1,4 +1,5 @@
+#!/usr/bin/env python3
 from format import Files
 
-f = Files(100)
-f.createFile(100)
+f = Files(1000, 'POTA011_', 'unix')
+f.createFile()
