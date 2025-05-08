@@ -22,14 +22,6 @@ Este projeto visa explorar a tecnologia GSM (Global System for Mobile Communicat
     - Telefonia móvel
     - Serviços de dados (SMS, GPRS)
 
-4. **Segurança no GSM**
-    - Mecanismos de segurança
-    - Vulnerabilidades e soluções
-
-5. **Impacto e Futuro do GSM**
-    - Impacto na sociedade
-    - Evolução para tecnologias futuras (3G, 4G, 5G)
-
 ## Conclusão
 O projeto fornecerá uma compreensão abrangente do sistema GSM, sua importância na comunicação móvel e seu papel na evolução das tecnologias de telecomunicações.
 
